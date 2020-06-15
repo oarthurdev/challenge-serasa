@@ -5,9 +5,10 @@ const AuthController = require('./controllers/AuthController')
 
 const routes = express.Router()
 
-routes.post('/auth', AuthController.auth)
+routes.post('/auth/login', AuthController.index)
+routes.post('/auth/register', AuthController.register)
+routes.post('/auth/logout', AuthController.logout)
 
 routes.get('/company', AuthController.verifyJWT, CompanyController.index)
-routes.post('/company', AuthController.verifyJWT, CompanyController.create)
 
 module.exports = routes
