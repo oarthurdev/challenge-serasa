@@ -6,6 +6,7 @@ exports.up = function(knex) {
         table.string('password').notNullable();
         table.integer('qtdInvoicesMonth').notNullable();
         table.integer('qtdDebtsMonth').notNullable();
+        table.integer('companyIndex').notNullable();
       });
 };
 
